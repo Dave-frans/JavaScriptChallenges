@@ -12,35 +12,35 @@
 <div id="shape">
 
 </div>
-<button id="mainButton">Click</button>
 <div id="div2">
 
 </div>
 <script>
-let makeShape = document.getElementById("shape");
-makeShape.style.width = "50px";
-makeShape.style.height = "25px";
-makeShape.style.backgroundColor = "#D3D3D3";
-var colorToggle = makeShape.style.backgroundColor;
-let createDiv2 = document.getElementById("div2")
-let creationButton = document.getElementById("mainButton");
-creationButton.addEventListener("click", reageerOpKlik);
+    let makeShape = document.getElementById("shape");
+    makeShape.style.width = "250px";
+    makeShape.style.height = "35px";
+    makeShape.style.backgroundColor = "gray";
+    makeShape.innerText = "Open";
+    var colorToggle = makeShape.style.backgroundColor;
+    let createDiv2 = document.getElementById("div2");
+    makeShape.addEventListener("click", reageerOpKlik);
 
-function reageerOpKlik() {
-    colorToggle = makeShape.style.backgroundColor = colorToggle === 'green' ? '#D3D3D3' : 'green';
-    createDiv2.style.width = "50px";
-    createDiv2.style.height = "25px";
-    createDiv2.style.backgroundColor = "Yellow";
-    var x = document.getElementById("div2");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-        creationButton.style.backgroundColor = "green";
-    } else {
-        creationButton.style.backgroundColor = "white";
-        x.style.display = "none";
+    function reageerOpKlik() {
+        colorToggle = makeShape.style.backgroundColor = colorToggle === 'green' ? 'gray' : 'green';
+        createDiv2.style.width = "250px";
+        createDiv2.style.height = "35px";
+        createDiv2.style.backgroundColor = "#ece4db";
+        createDiv2.innerText = "Profile";
+        var x = document.getElementById("div2");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            makeShape.style.backgroundColor = "green";
+        } else {
+            makeShape.style.backgroundColor = "gray";
+            x.style.display = "none";
+        }
+
     }
-
-}
 </script>
 
 </body>
