@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <style>
+/*<!--        Styling van div-->*/
+        #counterShape {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            border: 3px solid gray;
+            padding: 50px;
+            text-align: center;
+
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Click Counter</title>
+</head>
+<body>
+
+<h1 id="Name">Counter</h1>
+<div id="counterShape">
+    <label id="counterNumber">0</label><br>
+    <button id="minus">-</button>
+    <button id="plus">+</button>
+
+
+
+</div>
+
+
+<script>
+    // Counter naam van plaats veranderen
+    let name = document.getElementById("Name");
+    name.style.marginLeft = "7%";
+
+    // Variabele maken en listener geven voor plus knop
+    let plusButton = document.getElementById("plus");
+    plusButton.addEventListener("click", countUp)
+
+    //variabele maken, styling en listener geven voor min knop.
+    let minusButton = document.getElementById("minus");
+    minusButton.style.marginTop = "35px"
+    minusButton.addEventListener("click", countDown)
+
+    // variabele maken en styling van text veranderen.
+    let counterNumber = document.getElementById("counterNumber");
+    counterNumber.style.fontWeight = "bold";
+    counterNumber.style.fontSize = "50px";
+
+    //variabele om counter number te veranderen
+    let number = 0;
+
+    //Functie maken en connectie maken met html om iets te kunnen veranderen.
+    function countUp() {
+        number += 1;
+        document.getElementById("counterNumber").innerHTML = number;
+
+
+    }
+    // Functie maken en connectie maken met html om iets te kunnen veranderen.
+    function countDown() {
+        number -= 1;
+        document.getElementById("counterNumber").innerHTML = number;
+
+    }
+
+
+
+
+
+</script>
+
+</body>
+</html>
